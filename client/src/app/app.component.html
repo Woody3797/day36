@@ -1,6 +1,6 @@
 <h1 [routerLink]="['/']">Day 36</h1>
 
-<div style="border: solid 2px black; margin: 5px;">
+<div style="border: solid 2px green; margin: 5px;">
     <router-outlet></router-outlet>
 </div>
 
@@ -8,5 +8,9 @@
     <button type="button" (click)="displayNumber(1)">1</button>
     <button type="button" (click)="displayNumber(10)">10</button>
     <button type="button" [routerLink]="['/number/25']" [queryParams]="{ size: 'sm' }">25(size=sm)</button>
+
+    <a [routerLink]="['/bear']">Bear</a>
+    &nbsp;&nbsp;
+    <button type="button" (click)="goToBear()">Bear</button>
 
 </div>

@@ -1,0 +1,10 @@
+<h2>Uppercase</h2>
+
+<div *ngIf="uppercase$; else processing">
+    <h3>Original text: {{ text }} </h3>
+    <h3>Uppercase text: {{ uppercase$ | async }} </h3>
+</div>
+<button type="button" [routerLink]="['/']">Back</button>
+<ng-template #processing>
+    Processing
+</ng-template>

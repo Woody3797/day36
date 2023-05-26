@@ -12,10 +12,13 @@ export class AppComponent {
     router = inject(Router)
     numService = inject(NumberService)
 
+    goToBear() {
+        this.router.navigate(['/bear'])
+    }
 
     displayNumber(num: number) {
         this.numService.toDisplay = num
-        const queryParams: Params = { size: 'md'}
-        this.router.navigate([ '/', 'number',  num], { queryParams: queryParams })
+        const queryParams: Params = { size: 'sm'}
+        this.router.navigate([ '/number',  num], { queryParams: queryParams })
     }
 }

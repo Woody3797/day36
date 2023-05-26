@@ -1,4 +1,4 @@
-package ibf2022.csf.server;
+package ibf2022.csf.day36.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
