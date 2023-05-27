@@ -20,14 +20,16 @@ export class NumberComponent implements OnInit, OnDestroy {
     params$!: Subscription
 
     ngOnInit(): void {
-        // this.toDisplay = this.numberService.toDisplay
+        this.toDisplay = this.numberService.toDisplay
         this.toDisplay = this.activatedRoute.snapshot.params['num']
-        // const size = this.activatedRoute.snapshot.queryParams['size']
+        const size = this.activatedRoute.snapshot.queryParams['size']
+
+        this.updateView(this.toDisplay, size)
 
         this.params$ = this.activatedRoute.params.subscribe(
             values => {
-                console.info('values: ' + values)
-                this.updateView(values['num'], '')
+                console.info('values: ', values)
+                this.updateView(values['num'], 'sm')
             }
         )
     }

@@ -19,6 +19,6 @@ export class AppComponent {
     displayNumber(num: number) {
         this.numService.toDisplay = num
         const queryParams: Params = { size: 'sm'}
-        this.router.navigate([ '/number',  num], { queryParams: queryParams })
+        this.router.navigate([ '/number/',  num], { queryParams: queryParams })
     }
 }
